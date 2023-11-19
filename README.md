@@ -12,8 +12,8 @@ unzip /home/yabx/support-programs/linux/instantclient-sdk-linux.x64-12.2.0.1.0.z
 unzip /home/yabx/support-programs/linux/instantclient-sqlplus-linux.x64-12.2.0.1.0.zip 
 unzip /home/yabx/support-programs/linux/instantclient-tools-linux.x64-12.2.0.1.0.zip
 
-# If /opt/oracle/instantclient12_1/libclntsh.so is not found, make a symbolic link to link the library
-cd /opt/oracle/instantclient12_1
+# If /opt/oracle/instantclient12_2/libclntsh.so is not found, make a symbolic link to link the library
+cd /opt/oracle/instantclient12_2
 ln -s libclntsh.so.12.1 libclntsh.so
 ````
 4. Export ENV variables
@@ -21,7 +21,5 @@ ln -s libclntsh.so.12.1 libclntsh.so
 export ORACLE_HOME=/opt/oracle
 export LD_LIBRARY_PATH=$ORACLE_HOME/instantclient_12_1
 ````
-
-### Add env variables
-ORACLE_HOME
+5. Add `gem 'ruby-oci8'` in Gemfile and bundle it
 
